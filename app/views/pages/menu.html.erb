@@ -1,0 +1,92 @@
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Menu</h1>
+		<p>
+			A little bit of information about the things you'll find at our establishment. This is a menu with the goal of looking great on the desktop and mobile. Also, it's not a pain in the ass on mobile without restricting the amount of information it displays. 
+		</p>
+	</div>
+	<div class="large-12 columns">
+		<dl class="accordion" data-accordion>
+		  <dd>
+		    <a href="#panel1">Appetizers</a>
+		    <div id="panel1" class="content">
+					<% @apps.each do |app| %>
+						<div class="row">
+							<div class="large-4 columns">
+								<p class="menu-item-name">
+									<strong><%= app.name %></strong>
+								</p>
+							</div>
+							<div class="large-6 columns">
+								<p class="menu-item-description"><%= app.description %></p>	
+							</div>
+							<div class="large-2 columns">
+								<p class="menu-item-price"><%= number_to_currency(app.price) %></p>
+							</div>
+						</div>
+					<% end %>
+		    </div>
+		  </dd>
+		  <dd>
+		    <a href="#panel2">Mains</a>
+		    <div id="panel2" class="content">
+					<% @mains.each do |main| %>
+						<div class="row">
+							<div class="large-4 columns">
+								<p class="menu-item-name">
+									<strong><%= main.name %></strong>
+								</p>
+							</div>
+							<div class="large-6 columns">
+								<p class="menu-item-description"><%= main.description %></p>	
+							</div>
+							<div class="large-2 columns">
+								<p class="menu-item-price"><%= number_to_currency(main.price) %></p>
+							</div>
+						</div>
+					<% end %>
+		    </div>
+		  </dd>
+		  <dd>
+		    <a href="#panel3">Beers</a>
+		    <div id="panel3" class="content">
+					<% @beers.each do |beer| %>
+						<div class="row">
+							<div class="large-4 columns">
+								<p class="menu-item-name">
+									<strong><%= beer.name %></strong>
+								</p>
+							</div>
+							<div class="large-6 columns">
+								<p class="menu-item-description"><%= beer.description %></p>	
+							</div>
+							<div class="large-2 columns">
+								<p class="menu-item-price"><%= number_to_currency(beer.price) %></p>
+							</div>
+						</div>
+					<% end %>
+		    </div>
+		  </dd>
+		  <dd>
+		    <a href="#panel4">Desserts</a>
+		    <div id="panel4" class="content">
+					<% @desserts.each do |dessert| %>
+						<div class="row">
+							<div class="large-4 columns">
+								<p class="menu-item-name">
+									<strong><%= dessert.name %></strong>
+								</p>
+							</div>
+							<div class="large-6 columns">
+								<p class="menu-item-description"><%= dessert.description %></p>	
+							</div>
+							<div class="large-2 columns">
+								<p class="menu-item-price"><%= number_to_currency(dessert.price) %></p>
+							</div>
+						</div>
+					<% end %>
+		    </div>
+		  </dd>
+		</dl>
+	</div>
+</div>
